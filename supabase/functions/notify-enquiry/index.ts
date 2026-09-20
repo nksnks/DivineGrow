@@ -16,7 +16,10 @@ serve(async (request) => {
   const lines = Object.entries(enquiry).map(([key, value]) => `${key}: ${value ?? "—"}`).join("\n");
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
-    headers: { Authorization: `Bearer ${resendKey}`, "Content-Type": "application/json" },
+    headers: {
+      Authorization: `Bearer ${resendKey}`,
+      "Content-Type": "application/json",
+    },
     body: JSON.stringify({
       from: Deno.env.get("NOTIFY_FROM") || "DivineGrow Website <onboarding@resend.dev>",
       to: ["cemde.pankaj@gmail.com"],
@@ -27,5 +30,7 @@ serve(async (request) => {
   });
 
   if (!response.ok) return new Response(await response.text(), { status: 502, headers: cors });
-  return new Response(JSON.stringify({ sent: true }), { headers: { ...cors, "Content-Type": "application/json" } });
+  return new Response(JSON.stringify({ sent: true }), {
+    headers: { ...cors, "Content-Type": "application/json" },
+  });
 });
