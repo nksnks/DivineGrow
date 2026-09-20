@@ -2,173 +2,132 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="DivineGrow sources farmer-direct spices including clove, black pepper, turmeric, cardamom, cumin, coriander, chilli, paprika and mustard across India.">
-  <title>DivineGrow | Rooted in quality. Growing together.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DivineGrow LLP supplies premium quality Indian spices for wholesale and bulk supply to retailers, wholesalers, distributors, restaurants and food businesses across India.">
+  <meta name="keywords" content="Spice Supplier India, Wholesale Spices India, Spice Trader India, Bulk Spice Supplier, Turmeric Supplier, Chilli Supplier, Cumin Supplier, Coriander Supplier, Indian Spice Distributor, Spice Trading Company">
+  <meta name="theme-color" content="#123f32">
+  <meta property="og:title" content="DivineGrow LLP | Premium Quality Indian Spices">
+  <meta property="og:description" content="Premium quality Indian spices for reliable wholesale and bulk supply across India.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://divinegrow.co.in/">
+  <title>DivineGrow LLP | Premium Quality Indian Spices for Wholesale Supply</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2" defer></script>
+  <script src="supabase-config.js" defer></script>
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="/" aria-label="DivineGrow home">
-        <img src="divinegrow-logo.png" alt="DivineGrow logo">
-      </a>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links">
-        <a href="#about">About us</a>
-        <a href="#products">Products</a>
-        <a href="#story">Our story</a>
-        <a href="#contact" class="nav-cta">Start a conversation <span>↗</span></a>
+      <a class="brand" href="#home" aria-label="DivineGrow home"><img src="divinegrow-logo.png" alt="DivineGrow LLP"></a>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
+      <div class="nav-links" id="nav-links">
+        <a href="#why">Why us</a><a href="#products">Products</a><a href="#industries">Industries</a><a href="#process">Process</a><a href="#quality">Quality</a><a href="#about">About</a>
+        <a class="nav-cta" href="#quote">Request a quote <span>↗</span></a>
       </div>
     </nav>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-glow"></div>
-      <div class="container hero-grid">
+  <main id="home">
+<section class="hero">
+      <div class="hero-glow"></div><div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow"><span class="eyebrow-line"></span> India’s trusted spice partner</p>
-          <h1>Good business<br><em>starts at the root.</em></h1>
-          <p class="hero-text">Farmer-direct spices, thoughtfully sourced and reliably supplied for wholesalers, retailers, restaurants and food businesses across India.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#products">Explore our products <span>↗</span></a>
-            <a class="text-link" href="https://wa.me/919810610262?text=Hello%20DivineGrow%2C%20I%20am%20interested%20in%20your%20spice%20products" target="_blank" rel="noopener">Talk to our team <span>↗</span></a>
-          </div>
-          <div class="hero-proof">
-            <div class="avatars"><span>DG</span><span>IN</span><span>+</span></div>
-            <p><strong>Built on trust</strong><br>with partners across India</p>
-          </div>
+          <p class="eyebrow"><span class="eyebrow-line"></span> Indian spices. Business-ready supply.</p>
+          <h1>Premium Quality Indian Spices for <em>Reliable Business Supply.</em></h1>
+          <p class="hero-text">DivineGrow LLP helps retailers, wholesalers, distributors, restaurants, and food businesses source quality spices through a trusted and efficient supply network across India.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#quote">Request a Quote <span>↗</span></a><a class="text-link" href="#contact">Contact Us <span>↗</span></a></div>
+          <div class="hero-proof"><div class="avatars"><span>DG</span><span>IN</span><span>+</span></div><p><strong>Built for better supply</strong><br>from farm relationships to final dispatch</p></div>
         </div>
-        <div class="hero-visual">
-          <div class="image-frame">
-            <img src="https://divinegrow.co.in/images/hero.jpg" alt="Selection of colorful premium spices">
-          </div>
-          <div class="floating-note">
-            <span class="note-icon">✦</span>
-            <div><strong>Quality, always</strong><small>From source to supply</small></div>
-          </div>
-          <div class="leaf-mark">✽</div>
-        </div>
-      </div>
-      <div class="scroll-hint">Scroll to discover <span>↓</span></div>
+        <div class="hero-visual"><div class="image-frame"><img src="https://divinegrow.co.in/images/turmeric.jpg" alt="Golden turmeric and whole Indian spices"></div><div class="floating-note"><span class="note-icon">✦</span><div><strong>Quality, always</strong><small>From source to supply</small></div></div></div>
+      </div><div class="scroll-hint">Scroll to discover <span>↓</span></div>
     </section>
-
-    <section class="intro section" id="about">
-      <div class="container intro-grid">
-        <div>
-          <p class="eyebrow dark"><span class="eyebrow-line"></span> Who we are</p>
-          <h2>A reliable hand in a world of <em>possibilities.</em></h2>
-        </div>
-        <div class="intro-copy">
-          <p>DivineGrow is a New Delhi based sourcing and trading company connecting Indian farmers with businesses that care about better ingredients.</p>
-          <p>We work close to the farm, understand the season and source with care—so every order is more transparent, consistent and built for the long term.</p>
-          <a class="text-link dark-link" href="#contact">More about DivineGrow <span>↗</span></a>
-        </div>
+    <section class="why section" id="why"><div class="container"><div class="section-heading"><div><p class="eyebrow dark"><span class="eyebrow-line"></span> Why choose DivineGrow</p><h2>Good ingredients.<br><em>Better business.</em></h2></div><p>Everything we do is designed to make your spice supply more reliable.</p></div>
+      <div class="feature-grid">
+        <article><span class="feature-number">01</span><h3>Source close to growers</h3><p>Long-term relationships and regional knowledge help us find the right crop at the right time.</p></article>
+        <article><span class="feature-number">02</span><h3>Consistent quality</h3><p>We align on grade, cleanliness, moisture, colour and packing before an order moves.</p></article>
+        <article><span class="feature-number">03</span><h3>Clear communication</h3><p>One responsive partner keeps specifications, samples and dispatch updates easy to follow.</p></article>
+        <article><span class="feature-number">04</span><h3>Flexible quantities</h3><p>From trial lots to regular commercial supply, we shape the conversation around your needs.</p></article>
+        <article><span class="feature-number">05</span><h3>Fair value</h3><p>Efficient procurement and honest commercial conversations protect your margins.</p></article>
+        <article><span class="feature-number">06</span><h3>Partnership mindset</h3><p>We aim for repeat business built on trust, dependable service and shared growth.</p></article>
       </div>
-    </section>
-
-    <section class="products section" id="products">
-      <div class="container">
-        <div class="section-heading">
-          <div><p class="eyebrow dark"><span class="eyebrow-line"></span> What we supply</p><h2>Nature’s finest,<br><em>ready for yours.</em></h2></div>
-          <p>Carefully selected ingredients that help your products taste, smell and perform better.</p>
-        </div>
-        <div class="product-grid">
-          <article class="product-card product-card-large"><img src="https://divinegrow.co.in/images/cardamom.jpg" alt="Green cardamom pods"><div class="product-overlay"><span>01</span><h3>Cardamom</h3><p>Bright, floral and naturally distinctive.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/pepper.jpg" alt="Black peppercorns"><div class="product-overlay"><span>02</span><h3>Black Pepper</h3><p>Bold flavour, carefully selected.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/clove.jpg" alt="Whole dried cloves"><div class="product-overlay"><span>03</span><h3>Clove</h3><p>Warm, pungent buds with rich oil character.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/turmeric.jpg" alt="Turmeric rhizome and powder"><div class="product-overlay"><span>04</span><h3>Turmeric</h3><p>Rich colour, earthy warmth and trusted purity.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/cumin.jpg" alt="Whole cumin seeds"><div class="product-overlay"><span>05</span><h3>Cumin</h3><p>Earthy, warm and essential to masalas.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/coriander.jpg" alt="Coriander seeds"><div class="product-overlay"><span>06</span><h3>Coriander</h3><p>Fresh, citrusy character for blends and kitchens.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/chili.jpg" alt="Dried red chilies"><div class="product-overlay"><span>07</span><h3>Chili / Paprika</h3><p>From gentle colour to confident heat.</p></div></article>
-          <article class="product-card"><img src="https://divinegrow.co.in/images/mustard.jpg" alt="Yellow mustard seeds"><div class="product-overlay"><span>08</span><h3>Mustard</h3><p>Clean, nutty pungency for kitchens and blends.</p></div></article>
-          <article class="product-card custom-card"><div class="custom-symbol">✦</div><span>09</span><h3>Custom sourcing</h3><p>Looking for something specific? Tell us what your business needs.</p><a href="#contact">Let’s find it <span>↗</span></a></article>
-        </div>
+    </div></section>
+    <section class="products section" id="products"><div class="container"><div class="section-heading"><div><p class="eyebrow dark"><span class="eyebrow-line"></span> Product highlights</p><h2>India’s flavour,<br><em>ready for yours.</em></h2></div><p>Whole and powdered formats can be discussed for your application, pack size and destination.</p></div>
+      <div class="product-grid">
+        <article class="product-card product-card-large"><img src="https://divinegrow.co.in/images/turmeric.jpg" alt="Turmeric fingers and powder"><div class="product-overlay"><span>01</span><h3>Turmeric</h3><p>Vibrant colour and earthy warmth.</p></div></article>
+        <article class="product-card"><img src="https://divinegrow.co.in/images/chili.jpg" alt="Dried red chillies"><div class="product-overlay"><span>02</span><h3>Red Chilli</h3><p>Colour, heat and character for blends.</p></div></article>
+        <article class="product-card"><img src="https://divinegrow.co.in/images/coriander.jpg" alt="Coriander seeds"><div class="product-overlay"><span>03</span><h3>Coriander</h3><p>Fresh, citrusy and aromatic.</p></div></article>
+        <article class="product-card"><img src="https://divinegrow.co.in/images/cumin.jpg" alt="Cumin seeds"><div class="product-overlay"><span>04</span><h3>Cumin</h3><p>Warm, earthy and essential.</p></div></article>
+        <article class="product-card"><img src="https://divinegrow.co.in/images/pepper.jpg" alt="Black peppercorns"><div class="product-overlay"><span>05</span><h3>Black Pepper</h3><p>Bold bite and rich aroma.</p></div></article>
+        <article class="product-card"><img src="https://divinegrow.co.in/images/mustard.jpg" alt="Mustard seeds"><div class="product-overlay"><span>06</span><h3>Mustard</h3><p>Clean, nutty pungency.</p></div></article>
+        <article class="product-card product-card-small"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bb/Fennel_seeds_01.jpg/960px-Fennel_seeds_01.jpg" alt="Whole fennel seeds"><div class="product-overlay"><span>07</span><h3>Fennel</h3><p>Sweet, cooling and fragrant.</p></div></article>
+        <article class="product-card product-card-small"><img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e6/Fenugreek_seeds.jpg/960px-Fenugreek_seeds.jpg" alt="Whole fenugreek seeds"><div class="product-overlay"><span>08</span><h3>Fenugreek</h3><p>Distinctive, savoury and aromatic.</p></div></article>
       </div>
-    </section>
-
-    <section class="story section" id="story">
-      <div class="container story-grid">
-        <div class="story-copy"><p class="eyebrow dark"><span class="eyebrow-line"></span> From farm to business</p><h2>A better journey<br><em>starts with people.</em></h2><p>Behind every DivineGrow order is a farmer, a harvest and a careful decision about what is ready to move. We build direct, respectful sourcing relationships so growers get a dependable route to market and buyers get a clearer view of what they are purchasing.</p><p>We do not overcomplicate it: understand the crop, select with care, communicate clearly and deliver as promised.</p><div class="story-stats"><div><strong>01</strong><span>Source close to growers</span></div><div><strong>02</strong><span>Check quality at every step</span></div><div><strong>03</strong><span>Supply with consistency</span></div></div></div>
-        <div class="story-image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Bumbu_dan_Rempah_-_rempah.jpg/960px-Bumbu_dan_Rempah_-_rempah.jpg" alt="Assorted whole spices prepared for trade"><div class="story-note"><strong>Closer to the source</strong><span>Respecting every harvest</span></div></div>
-      </div>
-    </section>
-
-    <section class="approach section" id="approach">
-      <div class="container approach-grid">
-        <div class="approach-image logo-panel"><img src="divinegrow-logo.png" alt="DivineGrow logo"><div class="stamp">TRADE<br><small>with care</small></div></div>
-        <div class="approach-copy"><p class="eyebrow"><span class="eyebrow-line"></span> Why DivineGrow</p><h2>A simple promise:<br><em>do things well.</em></h2><p>In every conversation, every shipment and every partnership, we stay close to what matters: quality you can count on and service that feels personal.</p><div class="values"><div><strong>01</strong><h3>Trusted network</h3><p>Direct, respectful relationships close to the source.</p></div><div><strong>02</strong><h3>Quality focus</h3><p>Consistent products and careful attention to detail.</p></div><div><strong>03</strong><h3>Fair value</h3><p>Efficient procurement that works for your business.</p></div><div><strong>04</strong><h3>Long-term thinking</h3><p>Partnerships built on clarity and transparency.</p></div></div></div>
-      </div>
-    </section>
-
-    <section class="contact section" id="contact">
-      <div class="container contact-inner">
-        <p class="eyebrow"><span class="eyebrow-line"></span> Let’s grow together</p>
-        <h2>Have a requirement?<br><em>We’re here to help.</em></h2>
-        <p>Share your requirement and our team will respond with the right next step.</p>
-        <form class="enquiry-form" id="enquiry-form">
-          <div class="form-row"><label><span>Your name</span><input name="name" required autocomplete="name" placeholder="Your name"></label><label><span>Work email</span><input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label></div>
-          <div class="form-row"><label><span>What do you need?</span><select name="spice"><option>Choose a spice</option><option>Clove</option><option>Black Pepper</option><option>Turmeric</option><option>Cardamom</option><option>Cumin</option><option>Coriander</option><option>Chili / Paprika</option><option>Mustard</option><option>Multiple / custom sourcing</option></select></label><label><span>Approx. quantity</span><input name="quantity" placeholder="e.g. 100 kg / monthly"></label></div>
-          <label><span>Tell us a little about your requirement</span><textarea name="message" rows="3" required placeholder="Tell us about your business, delivery location and timeline"></textarea></label>
-          <button class="button button-dark" type="submit">Send enquiry <span>↗</span></button><p class="form-status" aria-live="polite"></p>
-        </form>
-        <div class="contact-details"><a href="tel:+919810610262">+91 98106 10262</a><span>•</span><a href="mailto:cemde.pankaj@gmail.com">cemde.pankaj@gmail.com</a><span>•</span><span>#397, Sector-18B, Dwarka New Delhi-110075, India</span></div>
-      </div>
-    </section>
+      <div class="custom-banner"><div><span class="eyebrow"><span class="eyebrow-line"></span> Need something specific?</span><h3>Tell us your brief. We’ll find the right route.</h3></div><a class="button button-primary" href="#quote">Request a quote <span>↗</span></a></div>
+      <div class="product-note"><strong>Applications</strong><span>Food processing · Retail packaging · Restaurants · Wholesalers</span><strong>Packaging</strong><span>5 kg · 10 kg · 25 kg · 50 kg · Custom</span></div>
+    </div></section>
+    <section class="industries section" id="industries"><div class="container"><div class="section-heading"><div><p class="eyebrow dark"><span class="eyebrow-line"></span> Industries served</p><h2>Spices that work<br><em>across the value chain.</em></h2></div><p>Tell us where your ingredient needs to perform and we’ll help shape the supply conversation.</p></div><div class="industry-grid"><div><span>01</span><h3>Retailers</h3><p>Reliable ingredients for customer-ready spice packs.</p></div><div><span>02</span><h3>Wholesalers</h3><p>Commercial lots and flexible trade conversations.</p></div><div><span>03</span><h3>Distributors</h3><p>Consistent supply for regional business networks.</p></div><div><span>04</span><h3>Restaurants</h3><p>Authentic flavour for kitchens and chefs.</p></div><div><span>05</span><h3>Hotels</h3><p>Dependable ingredients for hospitality operations.</p></div><div><span>06</span><h3>Food manufacturers</h3><p>Inputs for sauces, snacks and seasoning blends.</p></div><div><span>07</span><h3>Catering businesses</h3><p>Practical bulk supply for high-volume kitchens.</p></div><div><span>08</span><h3>Institutional buyers</h3><p>Clear specifications and dependable replenishment.</p></div></div></div></section>
+    <section class="process section" id="process"><div class="container"><div class="section-heading"><div><p class="eyebrow"><span class="eyebrow-line"></span> Our process</p><h2>From source to supply,<br><em>made clear.</em></h2></div><p>A straightforward process keeps quality and expectations aligned.</p></div><div class="process-flow">
+      <div><span>01</span><h3>Supplier sourcing</h3><p>We identify suitable growers and trusted procurement networks.</p></div><div><span>02</span><h3>Quality inspection</h3><p>We align on grade, cleanliness, moisture, colour and aroma.</p></div><div><span>03</span><h3>Procurement</h3><p>We confirm the right lot, commercial terms and quantity.</p></div><div><span>04</span><h3>Packaging</h3><p>We coordinate the pack format required for your application.</p></div><div><span>05</span><h3>Storage</h3><p>We support careful handling and moisture-aware holding.</p></div><div><span>06</span><h3>Delivery</h3><p>We keep dispatch updates and handover expectations clear.</p></div>
+    </div></div></section>
+    <section class="quality section" id="quality"><div class="container quality-grid"><div class="quality-image"><img src="https://divinegrow.co.in/images/pepper.jpg" alt="Premium black peppercorns"><span>QUALITY<br><small>you can build on</small></span></div><div><p class="eyebrow"><span class="eyebrow-line"></span> Quality assurance</p><h2>Confidence in<br><em>every shipment.</em></h2><p class="quality-copy">We discuss and document the checks that matter for your application. Our team helps align product identity, grade, cleanliness, moisture, colour, aroma, packing and delivery expectations before supply.</p><ul class="check-list"><li>Specification-led sourcing and sample alignment</li><li>Traceable supplier and lot conversations</li><li>Careful packing and dispatch coordination</li><li>Responsive support for repeat requirements</li></ul><a class="text-link light-link" href="#quote">Discuss your specification <span>↗</span></a></div></div></section>
+    <section class="intro section" id="about"><div class="container intro-grid">
+      <div><p class="eyebrow dark"><span class="eyebrow-line"></span> Who we are</p><h2>A reliable hand in a world of <em>possibilities.</em></h2></div>
+      <div class="intro-copy"><p>DivineGrow LLP is a New Delhi-based spice sourcing and supply partner for importers, manufacturers, wholesalers, retailers, restaurants and brands.</p><p>We bring together close-to-source relationships, practical quality checks and responsive service so every order is easier to plan and every partnership can grow.</p><a class="text-link dark-link" href="#vision">Discover our purpose <span>↗</span></a></div>
+    </div></section>
+    <section class="quote section" id="quote"><div class="container quote-inner"><p class="eyebrow"><span class="eyebrow-line"></span> Let’s grow together</p><h2>Have a requirement?<br><em>We’re here to help.</em></h2><p>Share the details below and our team will respond with availability and next steps.</p><form class="enquiry-form" id="enquiry-form">
+      <div class="form-row"><label><span>Your name *</span><input name="name" required autocomplete="name" placeholder="Your name"></label><label><span>Company *</span><input name="company" required autocomplete="organization" placeholder="Company name"></label></div>
+      <div class="form-row"><label><span>Work email *</span><input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label><label><span>Phone / WhatsApp *</span><input name="phone" required autocomplete="tel" placeholder="+country code"></label></div>
+      <div class="form-row"><label><span>Product *</span><select name="product" required><option value="">Select a spice</option><option>Turmeric</option><option>Red Chilli</option><option>Coriander</option><option>Cumin</option><option>Black Pepper</option><option>Mustard</option><option>Fennel</option><option>Fenugreek</option><option>Multiple / custom sourcing</option></select></label><label><span>Approx. quantity *</span><input name="quantity" required placeholder="e.g. 500 kg monthly"></label></div>
+      <div class="form-row"><label><span>Delivery destination *</span><input name="destination" required placeholder="City, country"></label><label><span>Timeline</span><input name="timeline" placeholder="When do you need it?"></label></div>
+      <div class="form-row"><label><span>Preferred packing</span><input name="packing" placeholder="e.g. 25 kg bags"></label><label><span>Format / grade</span><input name="grade" placeholder="Whole, powder, specification"></label></div>
+      <label><span>Tell us about your requirement *</span><textarea name="message" rows="4" required placeholder="Application, certifications, target specification or any other detail"></textarea></label><button class="button button-dark" type="submit">Send enquiry <span>↗</span></button><p class="form-status" aria-live="polite"></p>
+    </form></div></section>
+    <section class="contact section" id="contact"><div class="container contact-inner"><p class="eyebrow dark"><span class="eyebrow-line"></span> Contact DivineGrow</p><h2>Let’s start a <em>conversation.</em></h2><p>Our team is ready to discuss availability, specifications and delivery for your business.</p><form class="enquiry-form contact-form" id="contact-form"><div class="form-row"><label><span>Your name *</span><input name="name" required autocomplete="name" placeholder="Your name"></label><label><span>Company</span><input name="company" autocomplete="organization" placeholder="Company name"></label></div><div class="form-row"><label><span>Email *</span><input name="email" type="email" required autocomplete="email" placeholder="you@company.com"></label><label><span>Phone / WhatsApp *</span><input name="phone" required autocomplete="tel" placeholder="+country code"></label></div><label><span>Message *</span><textarea name="message" rows="3" required placeholder="How can we help?"></textarea></label><button class="button button-dark" type="submit">Send message <span>↗</span></button><p class="form-status" aria-live="polite"></p></form><div class="contact-details"><strong>DivineGrow LLP</strong><span>•</span><a href="tel:+919810610262">+91 98106 10262</a><span>•</span><a href="mailto:cemde.pankaj@gmail.com">cemde.pankaj@gmail.com</a><span>•</span><span>#397 Sector-18B Dwarka New Delhi-110075 India</span></div><p class="business-hours">Business hours: Monday to Saturday, 9:00 AM to 6:00 PM</p></div></section>
   </main>
 
-  <footer class="footer"><div class="container footer-inner"><a class="brand" href="/" aria-label="DivineGrow home"><img src="divinegrow-logo.png" alt="DivineGrow logo"></a><p>Farmer-direct sourcing. Dependable supply.</p><p>© 2026 DivineGrow LLP. All rights reserved.</p></div></footer>
-  <div class="chat-widget"><button class="chat-button" aria-expanded="false" aria-controls="chat-panel">✦ <span>Ask DivineGrow</span></button><div class="chat-panel" id="chat-panel"><div class="chat-heading"><strong>DivineGrow assistant</strong><button class="chat-close" aria-label="Close chat">×</button></div><div class="chat-messages" aria-live="polite"><div class="chat-message bot">Hello! I can help with spices, sourcing and enquiries. What would you like to know?</div></div><div class="chat-suggestions"><button type="button">What spices do you supply?</button><button type="button">Do you source from farmers?</button><button type="button">How can I request a quote?</button></div><form class="chat-form"><input type="text" aria-label="Ask DivineGrow a question" placeholder="Type your question…" autocomplete="off" required><button type="submit" aria-label="Send message">↗</button></form><a class="chat-whatsapp" href="https://wa.me/919810610262?text=Hello%20DivineGrow%2C%20I%20need%20help%20with%20spice%20sourcing" target="_blank" rel="noopener">Continue on WhatsApp ↗</a></div></div>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="#home" aria-label="DivineGrow home"><img src="divinegrow-logo.png" alt="DivineGrow LLP"></a><div class="footer-links"><a href="#about">About</a><a href="#products">Products</a><button type="button" data-legal="privacy-panel">Privacy Policy</button><button type="button" data-legal="terms-panel">Terms &amp; Conditions</button><button type="button" data-legal="disclaimer-panel">Disclaimer</button></div><p>© 2026 DivineGrow LLP. All rights reserved.</p></div></footer>
+  <div class="legal-panel" id="privacy-panel" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden><div class="legal-panel-inner"><button class="legal-close" type="button" aria-label="Close">×</button><h2 id="privacy-title">Privacy Policy</h2><p>When you contact DivineGrow, we use the information you provide only to respond to your enquiry, prepare a quotation or support an ongoing business relationship. We do not sell your information. To ask about your data, email <a href="mailto:cemde.pankaj@gmail.com">cemde.pankaj@gmail.com</a>.</p></div></div>
+  <div class="legal-panel" id="terms-panel" role="dialog" aria-modal="true" aria-labelledby="terms-title" hidden><div class="legal-panel-inner"><button class="legal-close" type="button" aria-label="Close">×</button><h2 id="terms-title">Terms &amp; Conditions</h2><p>Product availability, specifications, pricing and delivery are confirmed per enquiry and may change with season and market conditions. Prices and orders are subject to confirmation and acceptance by DivineGrow LLP. Liability is limited to the value of the relevant order, and these terms are governed by the laws of India.</p></div></div>
+  <div class="legal-panel" id="disclaimer-panel" role="dialog" aria-modal="true" aria-labelledby="disclaimer-title" hidden><div class="legal-panel-inner"><button class="legal-close" type="button" aria-label="Close">×</button><h2 id="disclaimer-title">Disclaimer</h2><p>DivineGrow LLP strives to provide accurate information. Product specifications, availability, pricing and supply conditions may vary and are subject to change without notice. Customers should verify requirements before placing orders.</p></div></div>
+  <div class="chat-widget"><button class="chat-button" aria-expanded="false" aria-controls="chat-panel">✦ <span>Ask DivineGrow</span></button><div class="chat-panel" id="chat-panel"><div class="chat-heading"><strong>DivineGrow assistant</strong><button class="chat-close" aria-label="Close chat">×</button></div><div class="chat-messages" aria-live="polite"><div class="chat-message bot">Hello! Ask me about our spices, sourcing or requesting a quote.</div></div><div class="chat-suggestions"><button type="button">What do you supply?</button><button type="button">How do I request a quote?</button></div><form class="chat-form"><input type="text" aria-label="Ask DivineGrow a question" placeholder="Type your question…" autocomplete="off" required><button type="submit" aria-label="Send message">↗</button></form><a class="chat-whatsapp" href="https://wa.me/919810610262?text=Hello%20DivineGrow%2C%20I%20need%20help%20with%20spice%20sourcing" target="_blank" rel="noopener">Continue on WhatsApp ↗</a></div></div>
   <script>
     const toggle = document.querySelector('.menu-toggle');
     const links = document.querySelector('.nav-links');
-    toggle.addEventListener('click', () => { const open = links.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', open); });
+    toggle.addEventListener('click', () => { const open = links.classList.toggle('is-open'); toggle.setAttribute('aria-expanded', String(open)); });
     links.querySelectorAll('a').forEach(link => link.addEventListener('click', () => links.classList.remove('is-open')));
-    document.querySelector('.enquiry-form').addEventListener('submit', event => {
+    document.querySelectorAll('.enquiry-form').forEach(form => form.addEventListener('submit', async event => {
       event.preventDefault();
-      const form = new FormData(event.currentTarget);
-      const subject = encodeURIComponent(`Spice enquiry from ${form.get('name')}`);
-      const body = encodeURIComponent(`Name: ${form.get('name')}\nEmail: ${form.get('email')}\nSpice: ${form.get('spice')}\nQuantity: ${form.get('quantity')}\n\nRequirement:\n${form.get('message')}`);
-      window.location.href = `mailto:cemde.pankaj@gmail.com?subject=${subject}&body=${body}`;
-      event.currentTarget.querySelector('.form-status').textContent = 'Opening your email app with the enquiry…';
-    });
-    const chatButton = document.querySelector('.chat-button');
-    const chatPanel = document.querySelector('.chat-panel');
-    const chatMessages = document.querySelector('.chat-messages');
-    const chatInput = document.querySelector('.chat-form input');
-    const answers = [
-      { keys: ['spice', 'supply', 'product', 'offer'], reply: 'We supply Clove, Black Pepper, Turmeric, Cardamom, Cumin, Coriander, Chili / Paprika and Mustard. We can also help with custom sourcing.' },
-      { keys: ['farmer', 'source', 'farm'], reply: 'We work close to growers and established producing regions, then check aroma, colour, cleanliness and grade before quoting.' },
-      { keys: ['quote', 'price', 'buy', 'order', 'quantity', 'kg'], reply: 'Please share the spice, approximate quantity, grade, packing and destination through our enquiry form. We will respond with availability and a commercial offer.' },
-      { keys: ['contact', 'email', 'phone', 'reach'], reply: 'You can email cemde.pankaj@gmail.com or call +91 98106 10262. Our office is in Dwarka, New Delhi.' },
-      { keys: ['delivery', 'ship', 'export', 'dispatch'], reply: 'We support domestic dispatch and export enquiries. Share your destination and packing requirement so the team can advise.' }
-    ];
-    function addChatMessage(text, type) {
-      const message = document.createElement('div');
-      message.className = `chat-message ${type}`;
-      message.textContent = text;
-      chatMessages.appendChild(message);
-      chatMessages.scrollTop = chatMessages.scrollHeight;
-    }
-    function answerQuestion(question) {
-      const normalized = question.toLowerCase();
-      const match = answers.find(item => item.keys.some(key => normalized.includes(key)));
-      return match ? match.reply : 'I can help with our spices, farmer-direct sourcing, quantities, delivery and enquiries. For a specific requirement, please use the enquiry form or continue on WhatsApp.';
-    }
-    function sendChat(question) {
-      const trimmed = question.trim();
-      if (!trimmed) return;
-      addChatMessage(trimmed, 'user');
-      chatInput.value = '';
-      window.setTimeout(() => addChatMessage(answerQuestion(trimmed), 'bot'), 350);
-    }
-    chatButton.addEventListener('click', () => { const open = chatPanel.classList.toggle('is-open'); chatButton.setAttribute('aria-expanded', open); if (open) chatInput.focus(); });
+      const form = event.currentTarget;
+      const status = form.querySelector('.form-status');
+      const submit = form.querySelector('button[type="submit"]');
+      if (!window.supabaseClient) { status.textContent = 'Enquiries are temporarily unavailable. Please email cemde.pankaj@gmail.com directly.'; return; }
+      submit.disabled = true; status.textContent = 'Sending your enquiry…';
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (form.classList.contains('contact-form')) Object.assign(data, { product: 'Contact request', quantity: '—', destination: 'India', source: 'contact' });
+      else data.source = 'website';
+      const { error } = await window.supabaseClient.from('enquiries').insert(data);
+      submit.disabled = false;
+      if (error) { status.textContent = 'We could not send your enquiry. Please try again or email us directly.'; return; }
+      let notificationMessage = '';
+      if (window.SUPABASE_NOTIFY_URL) {
+        try {
+          const notification = await fetch(window.SUPABASE_NOTIFY_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+          if (!notification.ok) notificationMessage = ' The enquiry was saved, but the email notification could not be sent.';
+        } catch (notificationError) {
+          notificationMessage = ' The enquiry was saved, but the email notification could not be sent.';
+        }
+      }
+      form.reset(); status.textContent = `Thank you — your enquiry has been received. We will be in touch soon.${notificationMessage}`;
+    }));
+    document.querySelectorAll('[data-legal]').forEach(trigger => trigger.addEventListener('click', () => { const panel = document.getElementById(trigger.dataset.legal); panel.hidden = false; document.body.classList.add('modal-open'); panel.querySelector('.legal-close').focus(); }));
+    document.querySelectorAll('.legal-panel').forEach(panel => panel.addEventListener('click', event => { if (event.target === panel || event.target.closest('.legal-close')) { panel.hidden = true; document.body.classList.remove('modal-open'); } }));
+    const chatButton = document.querySelector('.chat-button'), chatPanel = document.querySelector('.chat-panel'), chatInput = document.querySelector('.chat-form input'), chatMessages = document.querySelector('.chat-messages');
+    function addChat(text, type) { const node = document.createElement('div'); node.className = `chat-message ${type}`; node.textContent = text; chatMessages.appendChild(node); chatMessages.scrollTop = chatMessages.scrollHeight; }
+    function reply(question) { const q = question.toLowerCase(); if (q.includes('quote') || q.includes('price')) return 'Please use the quote form with your product, quantity and destination. We will respond with availability and a commercial offer.'; if (q.includes('supply') || q.includes('spice')) return 'We supply turmeric, red chilli, coriander, cumin, black pepper, mustard, fennel and fenugreek, plus custom sourcing.'; return 'I can help with our spices, sourcing and enquiries. Please use the quote form or continue on WhatsApp.'; }
+    function sendChat(text) { if (!text.trim()) return; addChat(text.trim(), 'user'); chatInput.value = ''; window.setTimeout(() => addChat(reply(text), 'bot'), 300); }
+    chatButton.addEventListener('click', () => { const open = chatPanel.classList.toggle('is-open'); chatButton.setAttribute('aria-expanded', String(open)); if (open) chatInput.focus(); });
     document.querySelector('.chat-close').addEventListener('click', () => { chatPanel.classList.remove('is-open'); chatButton.setAttribute('aria-expanded', 'false'); });
     document.querySelector('.chat-form').addEventListener('submit', event => { event.preventDefault(); sendChat(chatInput.value); });
     document.querySelectorAll('.chat-suggestions button').forEach(button => button.addEventListener('click', () => sendChat(button.textContent)));

@@ -1,0 +1,22 @@
+(() => {
+  const loginView = document.getElementById('login-view'), dashboardView = document.getElementById('dashboard-view');
+  const loginStatus = document.getElementById('login-status'), dashboardStatus = document.getElementById('dashboard-status');
+  const enquiriesEl = document.getElementById('enquiries'), logout = document.getElementById('logout');
+  let client, rows = [];
+  const configMessage = 'Add SUPABASE_URL and SUPABASE_ANON_KEY to supabase-config.js before signing in.';
+  function status(el, text, error = false) { el.textContent = text; el.classList.toggle('error', error); }
+  function escape(value) { return String(value ?? '').replace(/[&<>'"]/g, char => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char])); }
+  function render() {
+    const filter = document.getElementById('status-filter').value, search = document.getElementById('search-filter').value.toLowerCase();
+    const visible = rows.filter(row => (filter === 'all' || row.status === filter) && [row.name,row.company,row.email,row.product].join(' ').toLowerCase().includes(search));
+    enquiriesEl.innerHTML = visible.length ? visible.map(row => `<article class="enquiry"><div class="enquiry-meta"><strong>${escape(row.company)}</strong><time>${new Date(row.created_at).toLocaleString()}</time></div><p><b>${escape(row.name)}</b> · <a href="mailto:${escape(row.email)}">${escape(row.email)}</a> · ${escape(row.phone)}</p><p><b>${escape(row.product)}</b> — ${escape(row.quantity)} · ${escape(row.destination)}</p><p>${escape(row.message)}</p><details><summary>More details</summary><p>Timeline: ${escape(row.timeline || '—')} · Packing: ${escape(row.packing || '—')} · Grade: ${escape(row.grade || '—')} · Source: ${escape(row.source || 'website')}</p></details><label class="status-control">Status<select data-id="${row.id}"><option value="new" ${row.status==='new'?'selected':''}>New</option><option value="in_progress" ${row.status==='in_progress'?'selected':''}>In progress</option><option value="quoted" ${row.status==='quoted'?'selected':''}>Quoted</option><option value="closed" ${row.status==='closed'?'selected':''}>Closed</option></select></label></article>`).join('') : '<p class="empty">No enquiries match these filters.</p>';
+    enquiriesEl.querySelectorAll('select[data-id]').forEach(select => select.addEventListener('change', () => updateStatus(select.dataset.id, select.value)));
+  }
+  async function load() { status(dashboardStatus, 'Loading enquiries…'); const { data, error } = await client.from('enquiries').select('*').order('created_at', { ascending: false }); if (error) { status(dashboardStatus, `Unable to load enquiries: ${error.message}`, true); return; } rows = data || []; status(dashboardStatus, `${rows.length} submission${rows.length === 1 ? '' : 's'}`); render(); }
+  async function updateStatus(id, value) { const { error } = await client.from('enquiries').update({ status: value }).eq('id', id); if (error) { status(dashboardStatus, `Could not update status: ${error.message}`, true); return; } const row = rows.find(item => item.id === id); if (row) row.status = value; render(); }
+  async function init() { if (!window.supabaseClient) { status(loginStatus, configMessage, true); return; } client = window.supabaseClient; const { data } = await client.auth.getSession(); if (data.session) showDashboard(data.session.user); }
+  async function showDashboard(user) { loginView.hidden = true; dashboardView.hidden = false; logout.hidden = false; document.getElementById('user-email').textContent = user.email || ''; await load(); }
+  document.getElementById('login-form').addEventListener('submit', async event => { event.preventDefault(); if (!client) { status(loginStatus, configMessage, true); return; } status(loginStatus, 'Signing in…'); const { data, error } = await client.auth.signInWithPassword({ email: document.getElementById('email').value, password: document.getElementById('password').value }); if (error) { status(loginStatus, 'Sign-in failed. Check your credentials and admin access.', true); return; } showDashboard(data.user); });
+  logout.addEventListener('click', async () => { await client.auth.signOut(); dashboardView.hidden = true; loginView.hidden = false; logout.hidden = true; status(loginStatus, 'You have been signed out.'); });
+  document.getElementById('refresh').addEventListener('click', load); document.getElementById('status-filter').addEventListener('change', render); document.getElementById('search-filter').addEventListener('input', render); init();
+})();
