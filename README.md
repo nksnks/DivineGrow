@@ -1,6 +1,8 @@
 # DiVineGrow
 Building with Trust
 
+Production site: https://spices.divinegrow.co.in
+
 ## Supabase setup
 
 The site remains static GitHub Pages-compatible. The quote form uses the Supabase JavaScript CDN and reads its project settings from `supabase-config.js`.
