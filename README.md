@@ -1,7 +1,7 @@
 # DiVineGrow
 Building with Trust
 
-Production site: https://spices.divinegrow.co.in
+Production site: https://divinegrow.co.in
 
 ## Supabase setup
 
